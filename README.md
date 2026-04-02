@@ -1,7 +1,3 @@
-# PortfolioProject - Habit Tracker Pro
-
-Портфельный проект на C# для GitHub и собеседований: API + вау-дашборд с живой статистикой привычек.
-
 ## Что реализовано
 - ASP.NET Core Minimal API (.NET 10)
 - Современный фронт на `HTML/CSS/JS` в `wwwroot`
