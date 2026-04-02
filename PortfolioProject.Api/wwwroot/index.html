@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Habit Tracker Pro</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <h1>Habit Tracker Pro</h1>
+      </div>
+    </header>
+
+    <section class="metrics" id="metrics">
+      <article class="card metric-card">
+        <p class="label">Привычек</p>
+        <p class="metric" id="mTotal">0</p>
+      </article>
+      <article class="card metric-card">
+        <p class="label">Выполнено за 7 дней</p>
+        <p class="metric" id="mLast7">0</p>
+      </article>
+      <article class="card metric-card">
+        <p class="label">Средний прогресс</p>
+        <p class="metric" id="mAvg">0%</p>
+      </article>
+      <article class="card metric-card">
+        <p class="label">Лучшая серия</p>
+        <p class="metric" id="mBest">0</p>
+      </article>
+    </section>
+
+    <section class="main-grid">
+      <article class="card">
+        <h2>Новая привычка</h2>
+        <input id="name" placeholder="Название (например: Practice C#)" />
+        <input id="category" placeholder="Категория (Learning, Career...)" />
+        <input id="weeklyTarget" type="number" min="1" max="7" value="5" />
+        <button id="createBtn">Создать</button>
+        <p class="ok" id="okMsg"></p>
+        <p class="err" id="errMsg"></p>
+      </article>
+
+      <article class="card">
+        <div class="panel-head">
+          <h2>Активность за 7 дней</h2>
+          <span class="muted">сколько привычек закрыто в день</span>
+        </div>
+        <div class="chart-wrap" id="chart"></div>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="panel-head">
+        <h2>Мои привычки</h2>
+        <button id="refreshBtn" class="ghost-link as-button">Обновить</button>
+      </div>
+      <div id="habitList"></div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
